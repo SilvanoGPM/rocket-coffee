@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
+  <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -8,47 +8,61 @@
     <link rel="stylesheet" href="./styles/main.css" />
 
     <title>RocketCoffe</title>
-</head>
-<body>
+  </head>
+  <body>
+    <header class="header">
+      <a href="#" class="logo"> </a>
 
-  <header class="header">
-    <a href="#" class="logo">
-    </a>
+      <div class="navbar__wrapper" data-js="navbar">
+        <nav class="navbar">
+          <ul>
+            <li class="selected">
+              <a href="#">Home</a>
+            </li>
 
-    <div class="navbar__wrapper" data-js="navbar">
-      <nav class="navbar">
-        <ul>
-          <li class="selected">
-            <a href="#">Home</a>
-          </li>
+            <li>
+              <a href="#">Menu</a>
+            </li>
 
-          <li>
-            <a href="#">Menu</a>
-          </li>
+            <li>
+              <a href="#">Recompensas</a>
+            </li>
 
-          <li>
-            <a href="#">Recompensas</a>
-          </li>
+            <li>
+              <a href="#">Gift Cards</a>
+            </li>
 
-          <li>
-            <a href="#">Gift Cards</a>
-          </li>
+            <li>
+              <a href="#">Lojas</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
 
-          <li>
-            <a href="#">Lojas</a>
-          </li>
-        </ul>
-      </nav>
-    </div>
+      <div class="menu open" data-js="menu"></div>
 
-    <div class="menu open" data-js="menu">
-    </div>
+      <div class="take-coffe-desktop">
+        <button class="button">Pegar meu café</button>
+      </div>
+    </header>
 
-    <div class="take-coffe">
-      <button class="button">Pegar meu café</button>
-    </div>
-  </header>
+    <main>
+      <section>
+        <div class="title__header">
+          <p class="title__header__text">
+            O café que fará seu código decolar para o próximo nível.
+          </p>
+        </div>
 
-  <script src="./scripts/menu.js"></script>
-</body>
+        <div class="take-coffe-mobile">
+          <button class="button">
+            Pegar meu café
+            <img class="arrow" src="./assets/arrow.svg" />
+          </button>
+        </div>
+      </section>
+    </main>
+
+    <script src="./scripts/menu.js"></script>
+  </body>
 </html>
