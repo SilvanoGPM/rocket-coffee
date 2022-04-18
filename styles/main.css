@@ -76,6 +76,7 @@ body {
   z-index: 1000;
   overflow: hidden;
   transition: 0.2s ease-in-out;
+  background-color: var(--backgrond);
 }
 
 .navbar__wrapper.open {
