@@ -1,12 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap");
+
+/* Geral */
 
 :root {
   --backgrond: #000;
-  --text-color: #FFF;
-  --button: #8257E5;
-  --border: #29292E;
-  --border-menu-mobile: #A8A8B3;
-  --text-color-menu-mobile: #E1E1E6;
+  --text-color: #fff;
+  --button: #8257e5;
+  --border: #29292e;
+  --border-menu-mobile: #a8a8b3;
+  --text-color-menu-mobile: #e1e1e6;
 }
 
 * {
@@ -21,6 +23,34 @@ body {
   color: var(--text-color);
   background-color: var(--backgrond);
 }
+
+.button {
+  border: 2px solid var(--button);
+  color: var(--text-color);
+  border-radius: 8px;
+  background-color: transparent;
+  text-transform: uppercase;
+  font-family: inherit;
+  padding: 1.25rem 2rem;
+  transition: 0.2s ease-in-out;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+}
+
+.button:hover {
+  background-color: var(--button);
+  filter: brightness(1.025);
+  transform: scale(1.05);
+}
+
+.button:active {
+  transform: scale(0.95);
+}
+
+/* Mobile Header */
 
 .header {
   height: 70px;
@@ -76,7 +106,8 @@ body {
 
 .logo {
   --width: 100px;
-  background: url('../assets/logo-mobile.svg') no-repeat;
+  background-repeat: no-repeat;
+  background-image: url("../assets/logo-mobile.svg");
   background-position: center center;
   background-size: var(--width);
   width: var(--width);
@@ -94,9 +125,104 @@ body {
 }
 
 .menu.open {
-  background-image: url('../assets/menu-buguer-open.svg');
+  background-image: url("../assets/menu-buguer-open.svg");
 }
 
 .menu.close {
-  background-image: url('../assets/menu-buguer-close.svg');
+  background-image: url("../assets/menu-buguer-close.svg");
+}
+
+.take-coffe {
+  display: none;
+}
+
+/* Desktop Header */
+
+@media screen and (min-width: 1024px) {
+  .header {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    border: none;
+    justify-content: space-between;
+    padding: 0;
+  }
+
+  .logo {
+    --width: 40px;
+    background-image: url("../assets/logo-desktop.svg");
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .navbar__wrapper {
+    flex: 1;
+    opacity: 1;
+    position: static;
+    display: flex;
+    align-items: center;
+    padding: 0 5rem;
+  }
+
+  .navbar {
+    flex: 1;
+  }
+
+  .navbar ul {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar li {
+    border: none;
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .navbar li.selected {
+    border: none;
+  }
+
+  .navbar a {
+    color: var(--text-color);
+    padding: 0;
+    text-align: center;
+    position: relative;
+    font-size: 14px;
+  }
+
+  .navbar a::after {
+    content: '';
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    width: 0;
+    height: 1px;
+    background-color: var(--text-color);
+    transition: 0.2s ease-in-out;
+  }
+
+  .navbar a:hover::after {
+    width: 100%;
+  }
+
+  .take-coffe {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 200px;
+  }
+
+  .take-coffe .button {
+    width: 100%;
+    height: 37px;
+  }
 }
