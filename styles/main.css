@@ -1,0 +1,102 @@
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+:root {
+  --backgrond: #000;
+  --text-color: #FFF;
+  --button: #8257E5;
+  --border: #29292E;
+  --border-menu-mobile: #A8A8B3;
+  --text-color-menu-mobile: #E1E1E6;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Manrope;
+  font-weight: 400;
+  color: var(--text-color);
+  background-color: var(--backgrond);
+}
+
+.header {
+  height: 70px;
+  border-bottom: var(--border) 1px solid;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+.navbar__wrapper {
+  position: absolute;
+  top: 71px;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  width: 0;
+  opacity: 0;
+  z-index: 1000;
+  overflow: hidden;
+  transition: 0.2s ease-in-out;
+}
+
+.navbar__wrapper.open {
+  width: 100%;
+  opacity: 1;
+}
+
+.navbar ul {
+  list-style: none;
+}
+
+.navbar li {
+  width: 100%;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  border-bottom: var(--border) 1px solid;
+}
+
+.navbar li.selected {
+  border-left: var(--button) 4px solid;
+}
+
+.navbar a {
+  color: var(--border-menu-mobile);
+  text-decoration: none;
+  padding-left: 2rem;
+}
+
+.navbar li.selected a {
+  color: var(--text-color);
+}
+
+.logo {
+  --width: 100px;
+  background: url('../assets/logo-mobile.svg') no-repeat;
+  background-position: center center;
+  background-size: var(--width);
+  width: var(--width);
+  height: 100%;
+}
+
+.menu {
+  --size: 20px;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: var(--size) var(--size);
+  width: var(--size);
+  height: 100%;
+  cursor: pointer;
+}
+
+.menu.open {
+  background-image: url('../assets/menu-buguer-open.svg');
+}
+
+.menu.close {
+  background-image: url('../assets/menu-buguer-close.svg');
+}
