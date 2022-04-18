@@ -309,4 +309,14 @@ body {
   .take-coffe-mobile {
     display: none;
   }
+
+  .great {
+    font-size: 80px;
+    margin: 50px 0 0;
+  }
+
+  .rocket-coffe__figure {
+    max-width: 700px;
+    margin: auto;
+  }
 }
