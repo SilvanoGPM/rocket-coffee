@@ -25,7 +25,7 @@ body {
   background-color: var(--backgrond);
   background-image: url("../assets/blur-mobile.png");
   background-position: bottom;
-  background-size: 100% 400px;
+  background-size: 100% 250px;
   background-repeat: no-repeat;
 }
 
@@ -144,8 +144,8 @@ body {
 /* Main */
 
 .title__header {
-  max-width: 80%;
-  margin: 120px auto 150px;
+  max-width: 300px;
+  margin: 120px auto;
 }
 
 .title__header__text {
@@ -163,6 +163,42 @@ body {
 .take-coffe-mobile .button {
   width: 200px;
   height: 37px;
+}
+
+.great {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  flex-direction: column;
+  font-size: 50px;
+  margin: 120px 0 60px;
+}
+
+.great__coffee {
+  font-weight: bold;
+}
+
+.great__code {
+  color: var(--backgrond);
+  font-weight: bold;
+  text-shadow: -1px -1px 0 var(--button), 1px -1px 0 var(--button),
+    -1px 1px 0 var(--button), 1px 1px 0 var(--button);
+}
+
+.great__coffee,
+.great__code {
+  text-align: center;
+}
+
+.rocket-coffe__figure {
+  width: 100%;
+  height: 100%;
+}
+
+.rocket-coffe__figure img {
+  width: 100%;
+  height: 100%;
 }
 
 /* Desktop */
