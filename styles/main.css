@@ -118,6 +118,8 @@ body {
   background-size: var(--width);
   width: var(--width);
   height: 100%;
+  animation: fadeInLeft;
+  animation-duration: 1s;
 }
 
 .menu {
@@ -128,6 +130,8 @@ body {
   width: var(--size);
   height: 100%;
   cursor: pointer;
+  animation: fadeInRight;
+  animation-duration: 1s;
 }
 
 .menu.open {
@@ -147,6 +151,8 @@ body {
 .title__header {
   max-width: 300px;
   margin: 120px auto;
+  animation: fadeInDown;
+  animation-duration: 1.5s;
 }
 
 .title__header__text {
@@ -159,6 +165,8 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
+  animation: flipInX;
+  animation-duration: 1.6s;
 }
 
 .take-coffe-mobile .button {
@@ -194,6 +202,8 @@ body {
 .great__coffee,
 .great__code {
   text-align: center;
+  animation: fadeInUp;
+  animation-duration: 2s;
 }
 
 .rocket-coffe__figure {
@@ -225,11 +235,15 @@ body {
     border: none;
     justify-content: space-between;
     padding: 0;
+    animation: fadeInDown;
+    animation-duration: 1s;
   }
 
   .logo {
     --width: 40px;
     background-image: url("../assets/logo-desktop.svg");
+    animation: fadeInUpBig;
+    animation-duration: 2s;
   }
 
   .menu {
@@ -304,6 +318,8 @@ body {
   .take-coffe-desktop .button {
     width: 100%;
     height: 37px;
+    animation: rollIn;
+    animation-duration: 1.2s;
   }
 
   /* Main */
@@ -324,5 +340,12 @@ body {
   .rocket-coffe__figure {
     max-width: 700px;
     margin: auto;
+    transition: 0.2 ease-in-out;
+  }
+
+  .rocket-coffe__figure:hover {
+    animation: pulse;
+    animation-duration: 1s;
+    animation-iteration-count: 2;
   }
 }
