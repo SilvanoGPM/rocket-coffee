@@ -218,32 +218,18 @@ body {
 
 /* Desktop */
 
-@media screen and (min-width: 1024px) {
-  body {
-    background-image: url("../assets/blur-1.png"), url("../assets/blur-2.png");
-    background-position: bottom left, top right;
-    background-size: 600px 600px, 600px 600px;
-    background-repeat: no-repeat, no-repeat;
+@media screen and (min-width: 700px) {
+  .logo {
+    height: 50px;
+    margin-bottom: 16px;
   }
-
-  /* Header  */
 
   .header {
-    max-width: 1000px;
-    margin: auto;
-    margin-top: 50px;
-    border: none;
-    justify-content: space-between;
-    padding: 0;
-    animation: fadeInDown;
-    animation-duration: 1s;
-  }
-
-  .logo {
-    --width: 40px;
-    background-image: url("../assets/logo-desktop.svg");
-    animation: fadeInUpBig;
-    animation-duration: 2s;
+    height: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem 0;
   }
 
   .menu {
@@ -256,8 +242,10 @@ body {
     position: static;
     display: flex;
     align-items: center;
-    padding: 0 5rem;
     background-color: transparent;
+    width: 100%;
+    animation: flipInX;
+    animation-duration: 1s;
   }
 
   .navbar {
@@ -306,6 +294,41 @@ body {
 
   .navbar a:hover::after {
     width: 100%;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  body {
+    background-image: url("../assets/blur-1.png"), url("../assets/blur-2.png");
+    background-position: bottom left, top right;
+    background-size: 600px 600px, 600px 600px;
+    background-repeat: no-repeat, no-repeat;
+  }
+
+  /* Header  */
+
+  .header {
+    max-width: 1000px;
+    margin: auto;
+    margin-top: 50px;
+    border: none;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0;
+    animation: fadeInDown;
+    animation-duration: 1s;
+  }
+
+  .navbar__wrapper {
+    padding: 0 5rem;
+  }
+
+  .logo {
+    --width: 40px;
+    background-image: url("../assets/logo-desktop.svg");
+    animation: fadeInUpBig;
+    animation-duration: 2s;
   }
 
   .take-coffe-desktop {
